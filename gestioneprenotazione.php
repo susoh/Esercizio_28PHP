@@ -26,15 +26,15 @@
         $prezzoPrimo = 6;
         $prezzoSecondo = 7;
 
-        if (!$antipasto && !$primo && !$secondo) {   //SE NESSUNO E' SELEZIONATO
+        if (!$antipasto && !$primo && !$secondo) {   
             echo "<h1>Errore nella Prenotazione</h1>";
             echo "<p>Devi selezionare almeno un pasto</p>";
             echo "<p>Data e ora: " . date("d-m-Y H:i") . "</p>";
             echo "<a href='prenotazione.html'>Torna alla pagina di prenotazione</a>";
-            exit;  //ESCE DAL CODICE E LO FA TERMINARE
+            exit;  
         }
 
-        if ($antipasto && !$primo && !$secondo) {   //SE SOLO L'ANTIPASTO E' SELEZIONATO
+        if ($antipasto && !$primo && !$secondo) {   
             echo "<h1>Errore nella Prenotazione</h1>";
             echo "<p>Non è possibile ordinare solo l'antipasto.</p>";
             echo "<p>Data e ora: " . date("d-m-Y H:i") . "</p>";
@@ -43,7 +43,7 @@
         }
 
 
-        //PREZZI
+       
         $prezzoTotale = 0;
 
         if ($antipasto) {
@@ -59,15 +59,15 @@
         }
 
 
-        //SCONTI
+       
         if ($primo && $secondo) {
-            $prezzoTotale = $prezzoTotale - ($prezzoTotale * 0.1); //SCONTO 10%
+            $prezzoTotale = $prezzoTotale - ($prezzoTotale * 0.1); 
         } elseif ($antipasto && $primo && $secondo) {
-          $prezzoTotale = $prezzoTotale - ($prezzoTotale * 0.15); //SCONTO 15%
+          $prezzoTotale = $prezzoTotale - ($prezzoTotale * 0.15);
         }
 
         
-        //PREZZI PARCHEGGIO
+       
         if ($parcheggio == "non custodito") {
             $prezzoTotale = $prezzoTotale + 3;
         } elseif ($parcheggio == "custodito") {
