@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prenotazione Ristorante</h1>
+    <form action="gestioneprenotazione.php" method="post">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+  
+      <label for="cognome">Cognome:</label>
+      <input type="text" id="cognome" name="cognome" required>
+  
+      <label for="tavolo">Numero del tavolo:</label>
+      <select id="tavolo" name="tavolo" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+  
+      <label for="orario">Orario:</label>
+      <input type="time" id="orario" name="orario" required>
+  
+      <label for="note">Note:</label>
+      <textarea id="note" name="note"></textarea>
+  
+      <h2>Menu</h2>
+      <label>
+        <input type="checkbox" id="antipasto" name="antipasto">
+        Antipasto
+      </label>
+      <label>
+        <input type="checkbox" id="primo" name="primo">
+        Primo
+      </label>
+      <label>
+        <input type="checkbox" id="secondo" name="secondo">
+        Secondo
+      </label>
+  
+      <h2>Parcheggio</h2>
+      <label>
+        <input type="radio" id="parcheggioCustodito" name="parcheggio" value="custodito">
+        Parcheggio custodito
+      </label>
+      <label>
+        <input type="radio" id="parcheggioNonCustodito" name="parcheggio" value="non custodito">
+        Parcheggio non custodito
+      </label>
+      <label>
+        <input type="radio" id="noParcheggio" name="parcheggio" value="no">
+        Non usufruirò del parcheggio
+      </label>
+    <br><br>
+      <button type="submit">Invia prenotazione</button>
+    </form>
+</body>
+</html>
